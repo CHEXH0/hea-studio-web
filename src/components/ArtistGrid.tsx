@@ -5,25 +5,27 @@ import { Search } from "lucide-react";
 
 const ARTISTS = [
   {
-    name: "Luna Eclipse",
-    image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
-    genre: "Electronic",
-    bio: "Pioneering the future of electronic music with innovative soundscapes and rhythmic exploration.",
+    name: "CHEXHO",
+    image: "/laptop-pics/Chexho.png",
+    genre: "Riverside, California",
+    bio: "Planting the seeds for the future of musica medicina with a passion for the art of healing through music.",
+    spotifyUrl: "https://open.spotify.com/artist/51oO373JL3YH8dvT6v94xg?si=3SXqEjWHTWiolUFoaHsYhA",
+  },
+  
+  {
+    name: "Jeisson Díaz Santiago",
+    image: "/laptop-pics/Jiesson Diaz.jpg",
+    genre: "Bogotá, Colombia",
+    bio: "Pioneering the future of musica medicina with native soundscapes and mystical rhythmic explorations.",
     spotifyUrl: "#",
   },
+  
   {
-    name: "Sonic Wave",
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    genre: "Hip Hop",
-    bio: "Breaking boundaries in hip hop with unique beats and powerful lyrics.",
-    spotifyUrl: "#",
-  },
-  {
-    name: "Crystal Voice",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    genre: "Pop",
-    bio: "Creating chart-topping pop hits with unforgettable melodies.",
-    spotifyUrl: "#",
+    name: "Nick Zinchenko",
+    image: "/laptop-pics/Nick Zinchenko.jpg",
+    genre: "Luhansk, Ukraine",
+    bio: "Breaking boundaries in beat-making with innovative waves and powerful engineering.",
+    spotifyUrl: "https://open.spotify.com/artist/5MNMLU5i9pBJCNh9kEP9F5?si=Mw8UPTSvQA61DfpFZdYgcA",
   },
 ];
 

@@ -8,23 +8,23 @@ const PLATFORMS = [
   },
   {
     name: "Apple Music",
-    icon: "https://www.apple.com/v/apple-music/s/images/overview/icon_light__ev5x6rtqkumy_large.png",
+    icon: "/laptop-pics/Apple-Music.png",
     url: "#",
   },
   {
-    name: "SoundCloud",
-    icon: "https://developers.soundcloud.com/assets/logo_white.png",
+    name: "YouTube Music",
+    icon: "/laptop-pics/YouTube-Music.png",
     url: "#",
   },
 ];
 
 export const MusicPlatforms = () => {
   return (
-    <section id="listen" className="py-20 bg-black/50">
+    <section id="listen" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Listen Now</h2>
-          <p className="text-gray-400">
+          <h2 className="text-3xl font-bold mb-4 text-purple-500">Listen Now</h2>
+          <p className="text-white">
             Stream our music on your favorite platforms
           </p>
         </div>
@@ -34,7 +34,7 @@ export const MusicPlatforms = () => {
             <Button
               key={platform.name}
               variant="outline"
-              className="h-auto p-6 glass-card hover:bg-white/5 border-white/10 group"
+              className="h-auto p-6 bg-grey/5 hover:bg-purple-500 border-white/10 group"
               onClick={() => window.open(platform.url, "_blank")}
             >
               <div className="w-full space-y-4">

@@ -17,12 +17,12 @@ export const ArtistCard = ({ name, image, genre, bio, spotifyUrl }: ArtistCardPr
         <img
           src={image}
           alt={name}
-          className="object-cover w-full h-full filter grayscale hover:grayscale-0 transition-all duration-500"
+className="object-cover w-full h-full transition-all duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
           <Button
             variant="secondary"
-            className="w-full bg-white/10 backdrop-blur-sm hover:bg-white/20"
+            className="w-full bg-white/65 backdrop-blur-sm hover:bg-white/95"
             onClick={() => spotifyUrl && window.open(spotifyUrl, "_blank")}
           >
             <Music className="mr-2 h-4 w-4" />

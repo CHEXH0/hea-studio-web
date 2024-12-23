@@ -24,11 +24,11 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="bg-black py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+            <h2 className="text-3xl font-bold mb-4 text-studio">Get in Touch</h2>
             <p className="text-gray-400">
               Ready to create something amazing? Let's talk about your project
             </p>
@@ -44,7 +44,7 @@ export const ContactForm = () => {
                   id="name"
                   placeholder="Your name"
                   required
-                  className="bg-white/5 border-white/10 focus:border-studio"
+                  className="text-white bg-white/5 border-white/10 focus:border-pink-500"
                 />
               </div>
               <div className="space-y-2">
@@ -56,7 +56,7 @@ export const ContactForm = () => {
                   type="email"
                   placeholder="your@email.com"
                   required
-                  className="bg-white/5 border-white/10 focus:border-studio"
+                  className="text-white bg-white/5 border-white/10 focus:border-pink-500"
                 />
               </div>
             </div>
@@ -69,13 +69,13 @@ export const ContactForm = () => {
                 id="message"
                 placeholder="Tell us about your project..."
                 required
-                className="min-h-[150px] bg-white/5 border-white/10 focus:border-studio"
+                className="text-white min-h-[150px] bg-white/5 border-white/10 focus:border-pink-500"
               />
             </div>
 
             <Button
               type="submit"
-              className="w-full bg-studio hover:bg-studio/90"
+              className="w-full bg-studio hover:bg-purple-500"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Sending..." : "Send Message"}

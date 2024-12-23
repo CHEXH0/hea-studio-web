@@ -65,5 +65,5 @@
 }
 
 .technical-label {
-  @apply text-[10px] uppercase tracking-wider text-black/50 font-mono;
+  @apply text-[10px] uppercase tracking-wider text-black/65 font-mono;
 }
