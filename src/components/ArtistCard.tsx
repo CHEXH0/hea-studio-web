@@ -12,12 +12,12 @@ interface ArtistCardProps {
 
 export const ArtistCard = ({ name, image, genre, bio, spotifyUrl }: ArtistCardProps) => {
   return (
-    <Card className="glass-card overflow-hidden group">
+    <Card className="technical-border bg-white overflow-hidden group">
       <div className="relative aspect-square overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="object-cover w-full h-full transform transition-transform duration-300 group-hover:scale-105"
+          className="object-cover w-full h-full filter grayscale hover:grayscale-0 transition-all duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
           <Button
@@ -33,21 +33,25 @@ export const ArtistCard = ({ name, image, genre, bio, spotifyUrl }: ArtistCardPr
       <div className="p-4">
         <div className="flex items-start justify-between mb-2">
           <div>
-            <h3 className="text-lg font-semibold text-white">{name}</h3>
-            <p className="text-sm text-gray-400">{genre}</p>
+            <p className="technical-label mb-1">Artist Name</p>
+            <h3 className="handwritten text-xl">{name}</h3>
+            <p className="technical-label mt-2">{genre}</p>
           </div>
           {spotifyUrl && (
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-400 hover:text-white"
+              className="text-black/50 hover:text-black"
               onClick={() => window.open(spotifyUrl, "_blank")}
             >
               <ExternalLink className="h-4 w-4" />
             </Button>
           )}
         </div>
-        <p className="text-sm text-gray-300 line-clamp-3">{bio}</p>
+        <div className="mt-4">
+          <p className="technical-label mb-1">Biography</p>
+          <p className="text-sm text-black/70 font-mono line-clamp-3">{bio}</p>
+        </div>
       </div>
     </Card>
   );

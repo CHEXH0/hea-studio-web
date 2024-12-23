@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        handwritten: ['Permanent Marker', 'cursive'],
+        mono: ['Space Mono', 'monospace'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -84,6 +88,10 @@ export default {
           "50%": { height: "100%" },
           "100%": { height: "20%" },
         },
+        'sketch': {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -91,6 +99,7 @@ export default {
         "fade-in": "fade-in 0.5s ease-out",
         "fade-up": "fade-up 0.5s ease-out",
         waveform: "waveform 1.5s ease-in-out infinite",
+        'sketch': 'sketch 2s ease-out forwards',
       },
     },
   },

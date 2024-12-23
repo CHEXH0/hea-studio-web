@@ -1,27 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --background: 0 0% 98%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 3.9%;
     --primary: 0 72.2% 50.6%;
     --primary-foreground: 0 85.7% 97.3%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
     --ring: 0 72.2% 50.6%;
     --radius: 0.75rem;
   }
@@ -32,17 +34,21 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-mono;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
+.technical-border {
+  @apply border border-black/10 relative before:absolute before:content-[''] before:w-2 before:h-2 before:border-t before:border-l before:border-black/20 before:-top-1 before:-left-1 after:absolute after:content-[''] after:w-2 after:h-2 after:border-b after:border-r after:border-black/20 after:-bottom-1 after:-right-1;
+}
+
 .glass-card {
-  @apply bg-black bg-opacity-40 backdrop-blur-md border border-white/10 rounded-lg;
+  @apply bg-white/80 backdrop-blur-sm technical-border;
 }
 
 .nav-item {
-  @apply relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200;
+  @apply relative px-4 py-2 text-sm font-mono text-black/70 hover:text-black transition-colors duration-200;
 }
 
 .nav-item::after {
@@ -54,11 +60,10 @@
   @apply scale-x-100;
 }
 
-.waveform-container {
-  @apply flex items-end space-x-1 h-12;
+.handwritten {
+  @apply font-handwritten text-black/80;
 }
 
-.waveform-bar {
-  @apply w-1 bg-studio rounded-full animate-waveform;
-  animation-delay: calc(var(--delay) * 100ms);
+.technical-label {
+  @apply text-[10px] uppercase tracking-wider text-black/50 font-mono;
 }

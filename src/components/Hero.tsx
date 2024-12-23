@@ -10,38 +10,34 @@ export const Hero = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-background to-background" />
-
-      {/* Content */}
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      <div className="absolute inset-0 bg-[url('/lovable-uploads/cfbe9f4d-f255-44f9-a4e3-5414387f5950.png')] bg-cover bg-center opacity-5" />
+      
       <div className="container mx-auto px-4 pt-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-              Where Music Comes to Life
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-400">
-              Professional recording studio crafting the sound of tomorrow
-            </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8 opacity-0 animate-fade-in technical-border p-8 bg-white/80 backdrop-blur-sm" 
+               style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
+            <div className="flex justify-between items-start mb-6">
+              <div>
+                <p className="technical-label">Studio Name</p>
+                <h1 className="handwritten text-4xl md:text-6xl mb-2">HechoEnAmerica</h1>
+              </div>
+              <p className="technical-label">_2024</p>
+            </div>
+            
+            <div className="space-y-4">
+              <p className="technical-label">Mission Statement</p>
+              <p className="text-xl md:text-2xl text-black/70 font-mono">
+                Professional recording studio crafting the sound of tomorrow
+              </p>
+            </div>
           </div>
 
-          {/* Waveform Animation */}
-          <div className="waveform-container justify-center mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className="waveform-bar"
-                style={{ "--delay": i } as React.CSSProperties}
-              />
-            ))}
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="space-x-4 opacity-0 animate-fade-up" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
+          <div className="space-x-4 opacity-0 animate-fade-up" 
+               style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
             <Button
               size="lg"
-              className="bg-studio hover:bg-studio/90"
+              className="bg-black text-white hover:bg-black/90 font-mono"
             >
               Explore Artists
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -49,7 +45,7 @@ export const Hero = () => {
             <Button
               variant="outline"
               size="lg"
-              className="border-studio text-studio hover:bg-studio/10"
+              className="border-black text-black hover:bg-black/5 font-mono"
             >
               Book Studio
             </Button>
